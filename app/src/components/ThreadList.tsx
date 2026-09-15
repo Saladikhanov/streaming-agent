@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 
 import type { ThreadDto } from "../api/types";
 
+import { ACCOUNT_DOMAIN } from "../account";
 import { fetchThreads } from "../api/client";
+import { tr } from "../i18n";
 
 type Props = {
   onSelect: (id: string) => void;
@@ -36,7 +38,7 @@ export function ThreadList({ onSelect, selectedId }: Props) {
   };
 
   if (error) {
-    return <div className="p-4 text-xs text-red-600">Failed to load threads: {error}</div>;
+    return <div className="p-4 text-xs text-red-600">{tr('threads.loadFailed', { reason: error })}</div>;
   }
 
   return (
@@ -50,7 +52,9 @@ export function ThreadList({ onSelect, selectedId }: Props) {
           onClick={() => onSelect(thread.id)}
           type="button"
         >
-          {thread.title}
+          {/* Rendered as two spans so the domain can be de-emphasised, but they sit
+              adjacent so the row still reads "[acme.com] Q3 launch review". */}
+          <span className="text-neutral-400">[{ACCOUNT_DOMAIN}]</span> {thread.title}
         </button>
       ))}
       {cursor && (
@@ -59,7 +63,7 @@ export function ThreadList({ onSelect, selectedId }: Props) {
           onClick={loadMore}
           type="button"
         >
-          Load more…
+          {tr('threads.loadMore')}
         </button>
       )}
     </nav>
