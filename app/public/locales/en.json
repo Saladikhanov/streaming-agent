@@ -1,0 +1,68 @@
+{
+  "$locale": "en",
+
+  "app": {
+    "title": "DOJO Assistant"
+  },
+
+  "threads": {
+    "loadMore": "Load more…",
+    "loadFailed": "Failed to load threads: {reason}"
+  },
+
+  "composer": {
+    "placeholder": "Ask the assistant…",
+    "noThread": "Select a thread first",
+    "lockedByQuestion": "Answer the question above to continue",
+    "send": "Send",
+    "stop": "Stop"
+  },
+
+  "transcript": {
+    "noThread": "Select a thread",
+    "loading": "Loading {thread}…",
+    "empty": "Nothing in this thread yet.",
+    "jumpToLatest": "Jump to latest ↓",
+    "liveFromHere": "live from here",
+    "thinking": "Thinking",
+    "thinkingStreaming": "Thinking…",
+    "subAgent": "sub-agent",
+    "interrupted": "interrupted"
+  },
+
+  "status": {
+    "connecting": "Connecting…",
+    "stopped": "Stopped.",
+    "interrupted": "Connection dropped — this turn never finished.",
+    "failed": "The connection failed."
+  },
+
+  "question": {
+    "freeTextPlaceholder": "Or answer in your own words…",
+    "submit": "Send answers",
+    "submitted": "Answered",
+    "noAnswer": "(no answer)"
+  },
+
+  "artifact": {
+    "waiting": "Waiting for {id}…",
+    "emptyTable": "Empty table.",
+    "chartTitle": "Chart",
+    "chartNotRendered": "chart rendering not implemented",
+    "series": "{count} series",
+    "unsupported": "Unsupported artifact type “{type}”.",
+    "emptyCell": "—"
+  },
+
+  "boundary": {
+    "failed": "{label} could not be rendered.",
+    "messageLabel": "Message",
+    "toolInputLabel": "Tool input",
+    "artifactLabel": "Artifact {id}"
+  },
+
+  "fallback": {
+    "untitledError": "Something went wrong",
+    "untitledTool": "Tool call"
+  }
+}
